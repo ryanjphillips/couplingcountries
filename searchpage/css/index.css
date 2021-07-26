@@ -1,0 +1,240 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+body, html{
+    margin: 0px;
+}
+
+div#nav-div{
+    position: sticky;
+    background-color: rgba(255, 99, 71, 0.713);
+    top:0%;
+    height: 100px;
+    margin: 0px;
+    border: 1px black solid;
+    border-radius: 3px;
+}
+
+div#header-div{
+    background-image: url("/homepage/images/globe-2.jpg");
+    background-color: rgba(50, 85, 115, .80);
+    background-blend-mode: lighten;
+    background-position-y: 2000px;
+    background-position-x: -800px;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin: 0%;
+    z-index: -1;
+}
+
+button#nav-button{
+    left: 5%;
+    top: 50%;
+    background-color: rgba(50, 85, 115, .8);
+    border: black 1px solid;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+button#nav-button:hover{
+    color: white;
+}
+
+h1#button-descr{
+    left: 9%;
+    top: 36%;
+    font-size: 20px;
+}
+
+h1#country-heading{
+    top: 20%;
+    left: 30%;
+    font-size: 40px;
+}
+
+input#search-button{
+    top: 50%;
+    left: 50%;
+    height: 30px;
+    width: 300px;
+    text-align: center;
+    border: solid black 1px;
+    border-radius: 10px;
+
+}
+
+h1#coupling-heading{
+    top: 20%;
+    left: 70%;
+    font-size: 40px;
+}
+
+
+div#main-div{
+    height: 1000px;
+}
+
+.nav-class{
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+}
+
+a{
+    color: black;
+    
+}
+
+a:hover{
+    color: white
+
+}
+
+.header-div{
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+}
+
+h1#header-header{
+    top: 25%;
+    left: 50%;
+}
+
+h2#country-amount{
+    top: 55%;
+    left: 50%;
+}
+
+h3#search-criteria{
+    top:85%;
+    left: 50%;
+}
+
+div#section-div{
+    position: relative;
+    height: 125px;
+    background-color: rgba(50, 85, 115, 1);
+    border-top: solid black 1px;
+}
+
+button.sort-critera{
+    position: absolute;
+    background-color:  rgba(255, 99, 71, 0.72);
+    width: 100px;
+    height: 30px;
+    border: solid black 1px;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    top: 65%;
+    transform: translate(-50%, -50%);
+}
+
+button.sort-critera:hover{
+    background-color:  rgba(255, 99, 71, 1) ;
+}
+
+button#region{
+    left: 75%;
+}
+
+button#area{
+    left: 65%;
+    
+}
+
+button#languages{
+    left: 55%;
+    
+}
+
+button#population{
+    left: 45%; 
+}
+
+button#timezone{
+    left: 35%;
+}
+
+button#name{
+    left: 25%;
+}
+
+
+input#search{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 25%;
+    height: 30px;
+    width: 400px;
+    border: solid black 1px;
+    border-radius: 20px;
+    text-align: center;
+ 
+}
+
+
+button#scroll-to-data{
+    position: absolute;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    top: 25%;
+    width: 150px;
+    height: 30px;
+    border: solid black 1px;
+    border-radius: 20px;
+    background-color:  rgba(255, 99, 71, .72);
+}
+
+button#scroll-to-data:hover{
+    background-color:  rgba(255, 99, 71, 1);
+
+}
+
+
+div#main-div{
+    background-color: lightgray;
+}
+
+
+button#a-z{
+    position: absolute;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    top: 25%;
+    width: 150px;
+    height: 30px;
+    border: solid black 1px;
+    border-radius: 20px;
+    background-color:  rgba(255, 99, 71, .72);
+}
+
+button#a-z:hover{
+    background-color:  rgba(255, 99, 71, 1);
+
+}
+
+h1#header-header{
+    font-size: 40px;
+}
+
+h2#country-amount{
+    font-size: 25px;
+}
+
+h3#search-criteria{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+a#home-link{
+    right: 5%;
+    top: 50%;
+}
