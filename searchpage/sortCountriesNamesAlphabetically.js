@@ -1,12 +1,13 @@
 // Authour:     Ryan Phillips
-// Data:        07/26/2021
-// function:    sortCountriesAlphabetically
+// Date:        07/26/2021
+// Function:    sortCountriesAlphabetically()
+// Return:      Returns a object
 // Description: This function takes in an object and boolean and sorts the boolean A-Z if order is 1 or Z-A if order is 0.
 
 function sortCountriesNamesAlphabetically(object, order){
 
     if(order){
-        const sortedObj = object.sort((a,b) => {
+            object.sort((a,b) => {
 
             if ((a.name).toUpperCase() < (b.name).toUpperCase()){
 
@@ -15,8 +16,9 @@ function sortCountriesNamesAlphabetically(object, order){
 
             return 1; 
         })
+
     }else{
-        const sortedObj = object.sort((a,b) => {
+            object.sort((a,b) => {
 
             if ((a.name).toUpperCase() > (b.name).toUpperCase()){
 
@@ -27,7 +29,7 @@ function sortCountriesNamesAlphabetically(object, order){
         })
     }
 
-    return sortedObj;
+    return object;
 }
 
-module.exports = sortCountriesNamesAlphabetically;
+//module.exports = sortCountriesNamesAlphabetically;

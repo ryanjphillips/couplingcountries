@@ -1,3 +1,7 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 a.info-links{
     color: black;
     text-decoration: none;
@@ -22,7 +26,6 @@ button#getting-started{
     text-align: center;
     font-weight: bold;
     font-size: 18px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 button#getting-started:hover{
     background-color: rgba(50, 85, 115, .6);
@@ -44,7 +47,7 @@ button#scroll-button:hover{
 }
 
 div#body-div{
-    background-image: url("/homepage/images/globe-2.jpg");
+    background-image: url("/images/images/globe-2.jpg");
     background-color: rgba(50, 85, 115, .80);
     background-blend-mode: lighten;
     background-position-x: center;
@@ -89,7 +92,6 @@ h3#slogan-header{
 
 .heading-group{
     margin: 0%;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: black;
     border: solid black;
     border-radius: 0px;
@@ -101,8 +103,6 @@ ul#info-list{
     margin: 0%;
 }
 li.info-block{
-
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: inline-block;
     margin: 20px;
     font-size: 18px;
@@ -113,52 +113,33 @@ li.info-block{
 }
 li.info-block:hover{
     background-color: rgba(255, 99, 71, 0.72);
-
 }
 
 @media screen and (max-width: 950px) {
-    h2#prefix-header{
-        top: 35%;
-        left: 30%
-    }
-    
-  }
-
-  @media screen and (max-width: 950px) {
-    h3#slogan-header{
-        top: 65%;
-        left: 60%
-    }
-    
-  }
-
-  @media screen and (max-width: 950px) {
     button#getting-started{
         top: 75%;
         left: 50%;
         width: 300px;
     }
+
+    button#scroll-button{
+        bottom: -5%;
+    }   
+    div#footer-div{
+        height: 150px;
+    }  
+
+    h2#prefix-header{
+        top: 35%;
+        left: 30%
+    }
+
+    h3#slogan-header{
+        top: 65%;
+        left: 60%
+    }
     
-  }
-
-
-  @media screen and (max-width: 950px) {
     li.info-block{
         display: block;
     }
-    
   }
-
-  @media screen and (max-width: 950px) {
-    div#footer-div{
-        height: 150px;
-    }    
-}
-  
-@media screen and (max-width: 950px) {
-    button#scroll-button{
-        bottom: -5%;
-    }    
-}
-  
-  

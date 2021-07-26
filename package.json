@@ -1,0 +1,23 @@
+{
+  "name": "countrycoupling",
+  "version": "1.0.0",
+  "description": "A website to display and compare basic country data. This project was made based of the 30DaysOfJavaScript repo and to practice FrontEnd Web Development! ",
+  "main": "homepage/index.html",
+  "dependencies": {
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanjphillips/couplingcountries.git"
+  },
+  "author": "Ryan Phillips",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanjphillips/couplingcountries/issues"
+  },
+  "homepage": "https://github.com/ryanjphillips/couplingcountries#readme"
+}

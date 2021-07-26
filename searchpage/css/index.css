@@ -2,6 +2,19 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+a{
+    color: black;
+}
+
+a#home-link{
+    right: 5%;
+    top: 50%;
+}
+
+a:hover{
+    color: white
+
+}
 
 body, html{
     margin: 0px;
@@ -18,7 +31,7 @@ div#nav-div{
 }
 
 div#header-div{
-    background-image: url("/homepage/images/globe-2.jpg");
+    background-image: url("/images/images/globe-2.jpg");
     background-color: rgba(50, 85, 115, .80);
     background-blend-mode: lighten;
     background-position-y: 2000px;
@@ -80,16 +93,6 @@ div#main-div{
 .nav-class{
     position: absolute;
     transform: translate(-50%, -50%);
-
-}
-
-a{
-    color: black;
-    
-}
-
-a:hover{
-    color: white
 
 }
 
@@ -166,7 +169,6 @@ button#name{
     left: 25%;
 }
 
-
 input#search{
     position: relative;
     left: 50%;
@@ -179,7 +181,6 @@ input#search{
     text-align: center;
  
 }
-
 
 button#scroll-to-data{
     position: absolute;
@@ -198,11 +199,9 @@ button#scroll-to-data:hover{
 
 }
 
-
 div#main-div{
     background-color: lightgray;
 }
-
 
 button#a-z{
     position: absolute;
@@ -232,9 +231,4 @@ h2#country-amount{
 h3#search-criteria{
     font-size: 20px;
     text-decoration: underline;
-}
-
-a#home-link{
-    right: 5%;
-    top: 50%;
 }
