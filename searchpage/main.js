@@ -11,9 +11,15 @@ function main(){
         const countryObj = await countryDaya.json();
 
         navButtnOnClick(countryObj);
+
+        for(const country of countryObj){
+            createCountryPanel(country.flag, country.name, country.population, country.languages, country.capital); 
+        }
     }
 
     getCountryApi();
+
+    
 }
 
 main();

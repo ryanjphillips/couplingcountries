@@ -201,6 +201,7 @@ button#scroll-to-data:hover{
 
 div#main-div{
     background-color: lightgray;
+    overflow: auto;
 }
 
 button#a-z{
@@ -231,4 +232,9 @@ h2#country-amount{
 h3#search-criteria{
     font-size: 20px;
     text-decoration: underline;
+}
+
+ul#main-list{
+    list-style-type: none;
+    text-align: center;
 }

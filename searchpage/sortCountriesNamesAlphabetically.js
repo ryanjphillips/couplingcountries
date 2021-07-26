@@ -1,7 +1,7 @@
 // Authour:     Ryan Phillips
 // Date:        07/26/2021
 // Function:    sortCountriesAlphabetically()
-// Return:      Returns a object
+// Return:      Returns a object array
 // Description: This function takes in an object and boolean and sorts the boolean A-Z if order is 1 or Z-A if order is 0.
 
 function sortCountriesNamesAlphabetically(object, order){
@@ -32,4 +32,4 @@ function sortCountriesNamesAlphabetically(object, order){
     return object;
 }
 
-//module.exports = sortCountriesNamesAlphabetically;
+module.exports = sortCountriesNamesAlphabetically;
