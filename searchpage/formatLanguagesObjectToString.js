@@ -1,12 +1,17 @@
-function formatLanguagesObjectToString(langObj){
-    let languageString = "";
+// Authour:     Ryan Phillips
+// Date:        07/26/2021
+// Function:    formatLanguageObjecToString()
+// Return:      Returns a string
+// Description: This function takes in an object that iterates its contents into a string
+//                for better viewing.                          ]
 
-    for (const item of langObj){
-        languageString += `${item.name} `;
-    }
+function formatLanguagesObjectToString(langObj) {
+  const languageString = [];
 
-    return `${languageString}`;
+  for (const item of langObj) {
+    languageString.push(` ${item.name}`);
+  }
+
+  return languageString.join(',');
 }
-
-
 module.exports = formatLanguagesObjectToString;

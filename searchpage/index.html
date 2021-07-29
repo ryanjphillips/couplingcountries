@@ -28,13 +28,13 @@
 
         <section>
             <div id="section-div">
-                <input id="search" placeholder="Enter search criteria here"></input>
+                <input id="search" placeholder="Enter search criteria here (Default Country Name)"></input>
                 <button id="name" class="sort-critera">Name</button>
                 <button id="region"class="sort-critera">Region</button>
                 <button id="area"class="sort-critera">Area (meters)</button>
                 <button id="languages"class="sort-critera">Languages</button>
                 <button id="population"class="sort-critera">Population</button>
-                <button id="timezone" class="sort-critera">Timezone</button>
+                <button id="timezone" class="sort-critera">Gini</button>
                 <button id="scroll-to-data">To Graph...</button>
                 <button id="a-z">A-Z</button>
             </div>
@@ -62,7 +62,11 @@
             </div>
         </footer>
 
+        <script src="changeCriteriaHeading.js"></script>
+        <script src="formatNumberWithCommas.js"></script>
+        <script src="formatLanguagesObjectToString.js"></script>
         <script src="createCountryPanel.js"></script>
+        <script src="getCountryByName.js"></script>
         <script src="sortCountriesNamesAlphabetically.js"></script>
         <script src="navButtonOnClick.js"></script>
         <script src="main.js"></script>

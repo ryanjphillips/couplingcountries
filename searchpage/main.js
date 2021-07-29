@@ -4,22 +4,37 @@
 // Returns:     undefined
 // Description: Creation (main loop) of the website page countrycoupling.com/searchpage
 
-function main(){
-    
-    async function getCountryApi(){
-        const countryDaya = await fetch("https://restcountries.eu/rest/v2/all")
-        const countryObj = await countryDaya.json();
+function main() {
+  // Getting Elements
+  const getMainSearchButton = document.getElementById('search');
+  const getMainList = document.getElementById('main-list');
+  const searchCriteria = 'name';
 
-        navButtnOnClick(countryObj);
+  async function getCountryApi() {
+    const countryData = await fetch('https://restcountries.eu/rest/v2/all');
+    const countryObj = await countryData.json();
+    navButtnOnClick(countryObj);
 
-        for(const country of countryObj){
-            createCountryPanel(country.flag, country.name, country.population, country.languages, country.capital); 
+    // Display Default Screen
+    countryObj.forEach((item) => {
+      createCountryPanel(item.flag,
+        item.name,
+        item.population,
+        item.languages,
+        item.capital);
+      });
+
+      changeCriteriaHeading();
+
+      getMainSearchButton.addEventListener('input', (e) => {
+        const userInput = (e.target.value);
+        getMainList.innerHTML = '';
+
+        if (searchCriteria === 'name') {
+          getCountryByName(countryObj, userInput, 1);
         }
+      });
     }
-
-    getCountryApi();
-
-    
+  getCountryApi();
 }
-
 main();
