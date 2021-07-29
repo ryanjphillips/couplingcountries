@@ -28,8 +28,8 @@ function createCountryPanel(
   listPopulationName.textContent = ` Population: ${formatNumberWithCommas(countryPopulation)}`;
   listLanguagesName.textContent = ` Languages: ${formatLanguagesObjectToString(countryLanguages)}`;
 
-  listImg.style.width = '40%';
-  listImg.style.height = '30%';
+  listImg.style.width = '50%';
+  listImg.style.height = '35%';
   listImg.style.position = 'relative';
   listImg.style.top = '5%';
   listImg.style.border = 'solid black 1px';

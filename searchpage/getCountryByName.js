@@ -6,5 +6,4 @@ function getCountryByName(obj, input, alpha) {
       item.languages,
       item.capital);
   });
-  changeCriteriaHeading();
 }
