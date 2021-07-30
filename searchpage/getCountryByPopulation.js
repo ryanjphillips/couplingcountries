@@ -4,6 +4,8 @@ function getPopulationByCountry(obj, input, alpha) {
       item.name,
       item.population,
       item.languages,
-      item.capital);
+      item.capital,
+      item.area,
+      item.region);
   });
 }

@@ -1,7 +1,7 @@
 function formatNumberWithCommas(number) {
   let formattedNumb = number;
-  if (formattedNumb === undefined) {
-    return 'Number Is Undefined';
+  if (formattedNumb === undefined || formattedNumb === null) {
+    return '0';
   } if (typeof formattedNumb === 'string') {
     formattedNumb = formattedNumb.replace(/,/gi, '');
     formattedNumb = parseInt(formattedNumb, 10);
@@ -10,4 +10,4 @@ function formatNumberWithCommas(number) {
   return formattedNumb.toLocaleString();
 }
 
-module.exports = formatNumberWithCommas;
+module.exports = formatNumberWithCommas;1

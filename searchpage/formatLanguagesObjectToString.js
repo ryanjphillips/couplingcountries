@@ -8,10 +8,7 @@
 function formatLanguagesObjectToString(langObj) {
   const languageString = [];
 
-  for (const item of langObj) {
-    languageString.push(` ${item.name}`);
-  }
-
+  langObj.forEach((item) => languageString.push(` ${item.name}`));
   return languageString.join(',');
 }
 module.exports = formatLanguagesObjectToString;

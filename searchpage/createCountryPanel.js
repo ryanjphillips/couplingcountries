@@ -10,6 +10,8 @@ function createCountryPanel(
   countryPopulation,
   countryLanguages,
   countryCapital,
+  countryArea,
+  countryRegion,
 ) {
   // Create Elements
   const listItem = document.createElement('li');
@@ -18,6 +20,8 @@ function createCountryPanel(
   const listCapitalName = document.createElement('p');
   const listPopulationName = document.createElement('p');
   const listLanguagesName = document.createElement('p');
+  const listAreaName = document.createElement('p');
+  const listRegionName = document.createElement('p');
   const getUnorderedList = document.getElementById('main-list');
 
   // Adding Content to tags
@@ -27,12 +31,15 @@ function createCountryPanel(
   listCountryName.textContent = `${countryName}`;
   listPopulationName.textContent = ` Population: ${formatNumberWithCommas(countryPopulation)}`;
   listLanguagesName.textContent = ` Languages: ${formatLanguagesObjectToString(countryLanguages)}`;
+  listAreaName.textContent = ` Area: ${formatNumberWithCommas(countryArea)}`;
+  listRegionName.textContent = ` Region: ${countryRegion}`;
 
   listImg.style.width = '50%';
-  listImg.style.height = '35%';
+  listImg.style.height = '33%';
   listImg.style.position = 'relative';
   listImg.style.top = '5%';
   listImg.style.border = 'solid black 1px';
+  listImg.style.backgroundColor = 'gray';
 
   listCountryName.style.color = 'tomato';
   listCountryName.style.fontSize = '20px';
@@ -42,9 +49,11 @@ function createCountryPanel(
   listItem.appendChild(listCapitalName);
   listItem.appendChild(listLanguagesName);
   listItem.appendChild(listPopulationName);
+  listItem.appendChild(listAreaName);
+  listItem.appendChild(listRegionName);
 
   listItem.style.overflow = 'auto';
-  listItem.style.height = '350px';
+  listItem.style.height = '400px';
   listItem.style.width = '300px';
   listItem.style.backgroundColor = 'white';
   listItem.style.border = 'tomato solid 1px';

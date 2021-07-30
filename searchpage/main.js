@@ -27,7 +27,9 @@ function main() {
         item.name,
         item.population,
         item.languages,
-        item.capital);
+        item.capital,
+        item.area,
+        item.region);
     });
 
     // Updating Heading
@@ -109,8 +111,15 @@ function main() {
       } else if (searchCriteria === getPopulationButton.textContent) {
         getPopulationByCountry(countryObj, userInput, 1);
         changeCriteriaHeading();
-      } else if (searchCriteria === getLanguageButton.textContent) {
-        getLanguagesByCountry(countryObj, userInput, 1);
+      } else if (searchCriteria === getAreaButton.textContent) {
+        getCountryByArea(countryObj, userInput, 1);
+        changeCriteriaHeading();
+      } else if (searchCriteria === getRegionButton.textContent) {
+        console.log("Test1")
+        getCountryByRegion(countryObj, userInput, 1);
+        changeCriteriaHeading();
+      } else {
+        getLanguageByCountry(countryObj, userInput, 1);
         changeCriteriaHeading();
       }
     });
