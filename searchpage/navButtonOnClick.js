@@ -40,17 +40,17 @@ function navButtnOnClick(obj) {
       getNavDiv.appendChild(getNavButtonDiv);
       getNavButtonDiv.appendChild(createList);
 
-      for (const country of sortedObj) {
+      sortedObj.forEach((item) => {
         const createListItem = document.createElement('li');
         const createLinkItem = document.createElement('a');
         createLinkItem.setAttribute('href', 'www.google.com');
-        createLinkItem.textContent = `${country.name}`;
+        createLinkItem.textContent = `${item.name}`;
         createListItem.style.fontSize = '20px';
 
         // Apend Created Itemsn
         createListItem.appendChild(createLinkItem);
         createList.appendChild(createListItem);
-      }
+      });
     }
   });
 }

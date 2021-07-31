@@ -8,5 +8,6 @@ function getCountryByName(obj, input, alpha) {
         item.capital,
         item.area,
         item.region);
+        createTable(item, 3, 'population', 1377422166);
     });
 }

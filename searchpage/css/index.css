@@ -41,6 +41,7 @@ div#header-div{
     position: relative;
     margin: 0%;
     z-index: -1;
+    position: sticky;
 }
 
 button#nav-button{
@@ -83,11 +84,6 @@ h1#coupling-heading{
     top: 20%;
     left: 70%;
     font-size: 40px;
-}
-
-
-div#main-div{
-    height: 1000px;
 }
 
 .nav-class{
@@ -201,7 +197,7 @@ button#scroll-to-data:hover{
 
 div#main-div{
     background-color: lightgray;
-    overflow: auto;
+    overflow: visible;
 }
 
 button#a-z{
@@ -240,4 +236,47 @@ h3#search-criteria{
 ul#main-list{
     list-style-type: none;
     text-align: center;
+    
+}
+
+h1#graph-heading{
+    margin-top: 5%;
+    text-align: center;
+}
+
+section#section-two {
+    height: 0px;
+    width: 0px;
+}
+
+div#footer-div{
+    position: relative;
+    background-color:rgb(50, 85, 115, 1);
+    height: 75px;
+    text-align: center;
+    border-top: black solid 1px;
+    border-radius: 3px;
+}
+
+ul#info-list{
+    list-style-type: none;
+    margin: 0%;
+}
+li.info-block{
+    display: inline-block;
+    margin: 20px;
+    font-size: 18px;
+    color: black;
+    border-right: solid black 2px;
+    padding-right: 50px;
+
+}
+li.info-block:hover{
+    background-color: rgba(255, 99, 71, 0.72);
+}
+
+figure{
+    background-color: rgba(50, 85, 115, .5);
+    border: black solid 1px;
+    border-radius: 10px;
 }

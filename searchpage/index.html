@@ -27,7 +27,7 @@
 
         <section>
             <div id="section-div">
-                <input id="search" placeholder="Enter search criteria here (Default Country Name)"></input>
+                <input id="search" placeholder="Enter search criteria here"></input>
                 <button id="name" class="sort-critera">Name</button>
                 <button id="region"class="sort-critera">Region</button>
                 <button id="area"class="sort-critera">Area (meters)</button>
@@ -45,34 +45,43 @@
             </div>
         </main>
 
-        <section>
+        <section id="section-two">
 
         </section>
 
         <figure>
             <div id="figure-div">
-
+                <h1 id="graph-heading"> Countries Graph (Sorted by Criteria)</h1>
+                <table id="figure-table"></table>
             </div>
         </figure>
 
         <footer>
             <div id="footer-div">
-
+                <ul id="info-list">
+                    <li  class="info-block"> <a class="info-links" href="https://github.com/ryanjphillips" target="_blank" rel="noreferrer noopener"> My Github</a>
+                    <li  class="info-block"> <a class="info-links" href="https://restcountries.eu/" target="_blank" rel="noreferrer noopener"> Rest Countries API (Version 2.05)</a></a></li>
+                    <li  class="info-block"> <a class="info-links" href="https://github.com/Asabeneh/30-Days-Of-JavaScript" target="_blank" rel="noreferrer noopener">Based off the 30DaysOfJavaScript Repo</a></a></li>
+                </ul>
             </div>
         </footer>
-        
+
+        <script src="createTable.js"></script>
+        <script src="getButton.js"></script>
         <script src="getCountryByArea.js"></script>
         <script src="getCountryByPopulation.js"></script>
         <script src="getCountryByGini.js"></script>
         <script src="changeCriteriaHeading.js"></script>
         <script src="formatNumberWithCommas.js"></script>
         <script src="formatLanguagesObjectToString.js"></script>
-        <script src="getLanguagesByCountry.js"></script>
+        <script src="getCountryByLanguage.js"></script>
         <script src="createCountryPanel.js"></script>
         <script src="getCountryByName.js"></script>
         <script src="sortCountriesNamesAlphabetically.js"></script>
         <script src="navButtonOnClick.js"></script>
-        <scirpt src="getCountryByRegion.js"> </scirpt>
+        <script src="getCountryByRegion.js"></script>
+        <script src="updateAllButtonStyleOnClick.js"></script>
+        <script src="getCountryApi.js"></script>
         <script src="main.js"></script>
     </body>
 </html>

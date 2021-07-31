@@ -1,3 +1,9 @@
+// Authour:     Ryan Phillips
+// Date:        07/26/2021
+// Function:    formatNumbersWithCommas()
+// Return:      string
+// Description: This function converts any number or string to a string with appropriate commas.
+
 function formatNumberWithCommas(number) {
   let formattedNumb = number;
   if (formattedNumb === undefined || formattedNumb === null) {

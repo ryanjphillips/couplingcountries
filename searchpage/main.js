@@ -4,21 +4,10 @@
 // Returns:     undefined
 // Description: Creation (main loop) of the website page countrycoupling.com/searchpage
 
-function main() {
-  // Getting Elements
-  const getMainSearchButton = document.getElementById('search');
-  const getMainList = document.getElementById('main-list');
-  let searchCriteria = '';
-  const getNameButton = document.getElementById('name');
-  const getRegionButton = document.getElementById('region');
-  const getAreaButton = document.getElementById('area');
-  const getLanguageButton = document.getElementById('languages');
-  const getGiniButton = document.getElementById('gini');
-  const getPopulationButton = document.getElementById('population');
-
-  async function getCountryApi() {
-    const countryData = await fetch('https://restcountries.eu/rest/v2/all');
-    const countryObj = await countryData.json();
+async function main() {
+  try {
+    const countryObj = await getCountryApi();
+    let searchCriteria = '';
     navButtnOnClick(countryObj);
 
     // Display Default Screen
@@ -37,93 +26,66 @@ function main() {
 
     // Determine Button Section
 
-    getNameButton.addEventListener('click', () => {
-      searchCriteria = getNameButton.textContent;
-      getNameButton.style.backgroundColor = 'rgba(255, 99, 71, 1)';
-      getPopulationButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getAreaButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getRegionButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getLanguageButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getGiniButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
+    getButton('name').addEventListener('click', () => {
+      searchCriteria = updateAllButtonStyleOnClick('name', 'area', 'languages', 'gini', 'population', 'region');
     });
 
-    getRegionButton.addEventListener('click', () => {
-      searchCriteria = getRegionButton.textContent;
-      getRegionButton.style.backgroundColor = 'rgba(255, 99, 71, 1)';
-      getPopulationButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getAreaButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getNameButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getLanguageButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getGiniButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
+    getButton('region').addEventListener('click', () => {
+      searchCriteria = updateAllButtonStyleOnClick('region', 'area', 'languages', 'gini', 'population', 'name');
     });
 
-    getAreaButton.addEventListener('click', () => {
-      searchCriteria = getAreaButton.textContent;
-      getAreaButton.style.backgroundColor = 'rgba(255, 99, 71, 1)';
-      getPopulationButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getRegionButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getNameButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getLanguageButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getGiniButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
+    getButton('area').addEventListener('click', () => {
+      searchCriteria = updateAllButtonStyleOnClick('area', 'name', 'languages', 'gini', 'population', 'region');
     });
 
-    getLanguageButton.addEventListener('click', () => {
-      searchCriteria = getLanguageButton.textContent;
-      getLanguageButton.style.backgroundColor = 'rgba(255, 99, 71, 1)';
-      getPopulationButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getRegionButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getNameButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getAreaButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getGiniButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
+    getButton('languages').addEventListener('click', () => {
+      searchCriteria = updateAllButtonStyleOnClick('languages', 'area', 'name', 'gini', 'population', 'region');
     });
 
-    getGiniButton.addEventListener('click', () => {
-      searchCriteria = getGiniButton.textContent;
-      getGiniButton.style.backgroundColor = 'rgba(255, 99, 71, 1)';
-      getPopulationButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getRegionButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getNameButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getAreaButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getLanguageButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
+    getButton('gini').addEventListener('click', () => {
+      searchCriteria = updateAllButtonStyleOnClick('gini', 'area', 'languages', 'name', 'population', 'region');
     });
 
-    getPopulationButton.addEventListener('click', () => {
-      searchCriteria = getPopulationButton.textContent;
-      getPopulationButton.style.backgroundColor = 'rgba(255, 99, 71, 1)';
-      getGiniButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getRegionButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getNameButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getAreaButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
-      getLanguageButton.style.backgroundColor = 'rgba(255, 99, 71, .72)';
+    getButton('population').addEventListener('click', () => {
+      searchCriteria = updateAllButtonStyleOnClick('population', 'area', 'languages', 'gini', 'name', 'region');
+    });
+
+    getButton('scroll-to-data').addEventListener('click', () => {
+      var rect = getButton('graph-heading').getBoundingClientRect();
+      window.scrollTo(rect.top, rect.top);
     });
 
     // Main Search Event
-    getMainSearchButton.addEventListener('input', (e) => {
+    getButton('search').addEventListener('input', (e) => {
       const userInput = (e.target.value);
-      getMainList.innerHTML = '';
+      getButton('main-list').innerHTML = '';
+      document.getElementById('figure-table').innerHTML = '';
 
-      if (searchCriteria === getNameButton.textContent) {
+      if (searchCriteria === getButton('name').textContent) {
         getCountryByName(countryObj, userInput, 1);
         changeCriteriaHeading();
-      } else if (searchCriteria === getGiniButton.textContent) {
+      } else if (searchCriteria === getButton('gini').textContent) {
         getCountryByGini(countryObj, userInput, 1);
         changeCriteriaHeading();
-      } else if (searchCriteria === getPopulationButton.textContent) {
+      } else if (searchCriteria === getButton('population').textContent) {
         getPopulationByCountry(countryObj, userInput, 1);
         changeCriteriaHeading();
-      } else if (searchCriteria === getAreaButton.textContent) {
+      } else if (searchCriteria === getButton('area').textContent) {
         getCountryByArea(countryObj, userInput, 1);
         changeCriteriaHeading();
-      } else if (searchCriteria === getRegionButton.textContent) {
-        console.log("Test1")
+      } else if (searchCriteria === getButton('region').textContent) {
         getCountryByRegion(countryObj, userInput, 1);
         changeCriteriaHeading();
       } else {
-        getLanguageByCountry(countryObj, userInput, 1);
-        changeCriteriaHeading();
+        console.log('testing');
+        // getCountryByLanguage(countryObj, userInput, 1);
+        // changeCriteriaHeading();
       }
     });
+  } catch (err) {
+    // need to update this with DOM Elements for Failure
+    console.log(err);
   }
-  getCountryApi();
 }
+
 main();

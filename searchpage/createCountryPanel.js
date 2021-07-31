@@ -2,7 +2,8 @@
 // Date:        07/26/2021
 // Function:    createCountryPanel()
 // Return:      undefined
-// Description: This function dynamically creates HTML elements to be displayed on the search page
+// Description: This function dynamically creates HTML elements that will
+//              displayed the search page's country results.
 
 function createCountryPanel(
   countryImage,
@@ -34,12 +35,13 @@ function createCountryPanel(
   listAreaName.textContent = ` Area: ${formatNumberWithCommas(countryArea)}`;
   listRegionName.textContent = ` Region: ${countryRegion}`;
 
-  listImg.style.width = '50%';
-  listImg.style.height = '33%';
+  listImg.style.width = '60%';
+  listImg.style.height = '35%';
   listImg.style.position = 'relative';
   listImg.style.top = '5%';
   listImg.style.border = 'solid black 1px';
   listImg.style.backgroundColor = 'gray';
+  listImg.style.backgroundPosition = 'center';
 
   listCountryName.style.color = 'tomato';
   listCountryName.style.fontSize = '20px';
@@ -53,7 +55,7 @@ function createCountryPanel(
   listItem.appendChild(listRegionName);
 
   listItem.style.overflow = 'auto';
-  listItem.style.height = '400px';
+  listItem.style.height = '425px';
   listItem.style.width = '300px';
   listItem.style.backgroundColor = 'white';
   listItem.style.border = 'tomato solid 1px';
@@ -62,3 +64,5 @@ function createCountryPanel(
 
   getUnorderedList.appendChild(listItem);
 }
+
+module.exports = createCountryPanel;
