@@ -1,9 +1,19 @@
 function createTable(obj, column, properties, percentage) {
   const table = document.getElementById('figure-table');
   table.style.textAlign = 'center';
-  table.style.fontSize = '25px';
-  table.style.width = '100%';
-  table.style.height = '100%';
+  table.style.fontSize = '20px';
+  table.style.position = 'relative';
+  table.style.left = '15%';
+  table.style.border = 'solid black 1px';
+  table.style.borderRadius = '5px';
+  table.style.padding = '50px';
+  table.style.color = 'tomato';
+  table.style.fontWeight = 'bold';
+  table.style.webkitTextStrokeWidth = '.5px';
+  table.style.webkitTextStrokeColor = 'black';
+  table.style.borderBottom = 'none';
+  table.style.borderTop = 'none';
+
   table.style.fontFamily = 'Cambria, Cochin, Georgia, Times, Times New Roman, serif';
   const newRow = document.createElement('tr');
 
@@ -14,7 +24,7 @@ function createTable(obj, column, properties, percentage) {
       newColumn.textContent = obj.name;
       newColumn.style.borderRight = 'black solid 1px';
       newColumn.style.overflow = 'auto';
-      newColumn.style.height = '200px';
+      newColumn.style.height = '125px';
       newColumn.style.width = '100px';
       newColumn.style.borderBottom = 'black solid 1px';
     }
@@ -30,7 +40,7 @@ function createTable(obj, column, properties, percentage) {
       const newDiv = document.createElement('div');
       newDiv.style.backgroundColor = 'rgba(255, 99, 71, 1)';
       newDiv.style.width = `${columnWidth}%`;
-      newDiv.style.height = '175px';
+      newDiv.style.height = '100px';
       newDiv.style.borderRadius = '10px';
       newDiv.style.border = 'black solid 1px';
       newDiv.style.textAlign = 'right';
@@ -41,7 +51,7 @@ function createTable(obj, column, properties, percentage) {
     if (x === 2) {
       newColumn.textContent = formatNumberWithCommas(obj[properties]);
       newColumn.style.borderLeft = 'black solid 1px';
-      newColumn.style.height = '200px';
+      newColumn.style.height = '125px';
       newColumn.style.width = '100px';
       newColumn.style.borderBottom = 'black solid 1px';
     }

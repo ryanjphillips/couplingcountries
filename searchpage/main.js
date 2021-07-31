@@ -55,6 +55,10 @@ async function main() {
       window.scrollTo(rect.top, rect.top);
     });
 
+    getButton('to-top').addEventListener('click', () => {
+      window.scrollTo(0, 0);
+    });
+
     // Main Search Event
     getButton('search').addEventListener('input', (e) => {
       const userInput = (e.target.value);
@@ -77,7 +81,6 @@ async function main() {
         getCountryByRegion(countryObj, userInput, 1);
         changeCriteriaHeading();
       } else {
-        console.log('testing');
         // getCountryByLanguage(countryObj, userInput, 1);
         // changeCriteriaHeading();
       }

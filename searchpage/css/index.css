@@ -8,7 +8,7 @@ a{
 
 a#home-link{
     right: 5%;
-    top: 50%;
+    top: 55%;
 }
 
 a:hover{
@@ -22,18 +22,19 @@ body, html{
 
 div#nav-div{
     position: sticky;
-    background-color: rgba(255, 99, 71, 0.713);
+    background-color: rgba(255, 99, 71, .8);
     top:0%;
-    height: 100px;
+    height: 75px;
     margin: 0px;
     border: 1px black solid;
     border-radius: 3px;
+    border-top:none;
 }
 
 div#header-div{
     background-image: url("/images/images/globe-2.jpg");
-    background-color: rgba(50, 85, 115, .80);
-    background-blend-mode: lighten;
+    background-color: rgba(50, 85, 115, 1);
+    background-blend-mode: hard-light;
     background-position-y: 2000px;
     background-position-x: -800px;
     width: 100%;
@@ -42,15 +43,18 @@ div#header-div{
     margin: 0%;
     z-index: -1;
     position: sticky;
+    border: solid black 2.5px;
 }
 
 button#nav-button{
     left: 5%;
     top: 50%;
-    background-color: rgba(50, 85, 115, .8);
+    background-color: rgba(50, 85, 115, 1);
     border: black 1px solid;
     font-size: 25px;
     border-radius: 10px;
+    height:25px;
+    text-align: center;
 }
 
 button#nav-button:hover{
@@ -59,7 +63,7 @@ button#nav-button:hover{
 
 h1#button-descr{
     left: 9%;
-    top: 36%;
+    top: 34%;
     font-size: 20px;
 }
 
@@ -67,6 +71,7 @@ h1#country-heading{
     top: 20%;
     left: 30%;
     font-size: 40px;
+    border-top: solid black 1px;
 }
 
 input#search-button{
@@ -84,6 +89,8 @@ h1#coupling-heading{
     top: 20%;
     left: 70%;
     font-size: 40px;
+    border-bottom: solid black 1px;
+    padding-bottom: 0px;
 }
 
 .nav-class{
@@ -118,8 +125,9 @@ h3#search-criteria{
 div#section-div{
     position: relative;
     height: 125px;
-    background-color: rgba(50, 85, 115, 1);
+    background-color: rgba(50, 85, 115, .95);
     border-top: solid black 1px;
+    border-bottom: solid black .5px;
 }
 
 button.sort-critera{
@@ -196,8 +204,10 @@ button#scroll-to-data:hover{
 }
 
 div#main-div{
-    background-color: lightgray;
+    background: rgb(50,85,115);
+    background: linear-gradient(143deg, rgba(50,85,115,1) 20%, rgba(177,177,184,1) 27%, rgba(255,99,71,1) 80%, rgba(50,85,115,1) 87%);
     overflow: visible;
+    min-height: 510px;
 }
 
 button#a-z{
@@ -228,14 +238,18 @@ h2#country-amount{
 h3#search-criteria{
     font-size: 20px;
     text-decoration: underline;
-    background-color:  rgba(255, 99, 71, 1);
+    background-color:  rgba(255, 99, 71, .8);
     border: 1px black solid;
     border-radius: 5px;
+    padding: 5px 20px;
 }
 
 ul#main-list{
     list-style-type: none;
     text-align: center;
+    margin: 0px;
+    padding-left: 0px;
+
     
 }
 
@@ -276,7 +290,102 @@ li.info-block:hover{
 }
 
 figure{
-    background-color: rgba(50, 85, 115, .5);
+    
     border: black solid 1px;
     border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
+}
+div#figure-div{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(50, 85, 115, .7);
+}
+
+h1#slogan{
+    position: absolute;
+    text-decoration:overline;
+    text-decoration: underline;
+    left: 50%;
+    top: 50%;
+    font-size: 20px;
+}
+
+button#to-top{
+    background-color: rgba(255, 99, 71, 0.707);
+    text-align: center;
+    height: 35px;
+    width: 100%;
+    margin: 0px;
+    padding: 0%;
+    border: none;
+}
+
+button#to-top:hover{
+    color: white;
+
+}
+
+@media screen and (max-width: 1919px){
+    button.sort-critera{
+        width: 85px;
+    }
+
+    input#search {
+        left: 35%;
+        width: 150px;
+    }
+
+    button#button-descr{
+        left: 40%;
+    }
+    
+    
+}
+
+@media screen and (max-width: 948px){
+    button.sort-critera{
+        width: 60px;
+        font-size: 9px;
+    }
+
+    button#region{
+        left: 89%;
+    }
+    
+    button#area{
+        left: 75.1%;
+        
+    }
+    
+    button#languages{
+        left: 61.5%;
+        
+    }
+    
+    button#population{
+        left: 48%; 
+    }
+    
+    button#gini{
+        left: 34%;
+    }
+    
+    button#name{
+        left: 20%;
+    }
+    button#scroll-to-data {
+        left: 77%;
+    }
+    div#footer-div{
+        height: 125px ;
+    }
+    
+}
+
+@media screen and (max-width: 948px){
+    div#footer-div{
+        height: 175px ;
+    }
 }
