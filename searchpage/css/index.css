@@ -136,7 +136,7 @@ div#nav-div{
 }
 
 div#header-div{
-    background-image: url("/code/countrycoupling/couplingcountries/images/globe-2.jpg");
+    background-image: url("../globe-2.jpg");
     background-color: rgba(50, 85, 115, 1);
     background-blend-mode: hard-light;
     background-position-y: 2000px;
