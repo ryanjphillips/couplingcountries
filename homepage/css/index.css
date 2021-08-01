@@ -47,7 +47,7 @@ button#scroll-button:hover{
 }
 
 div#body-div{
-    background-image: url("/images/images/globe-2.jpg");
+    background-image: url("/code/countrycoupling/couplingcountries/images/globe-2.jpg");
     background-color: rgba(50, 85, 115, .80);
     background-blend-mode: lighten;
     background-position-x: center;
