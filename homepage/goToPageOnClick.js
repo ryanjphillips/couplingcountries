@@ -7,6 +7,6 @@
 function goToPageOnClick() {
   const gettingStartedButton = document.getElementById('getting-started');
   gettingStartedButton.addEventListener('click', () => {
-    window.location.assign('/searchpage/index.html');
+    window.location.assign('/code/countrycoupling/couplingcountries/searchpage/index.html');
   });
 }
