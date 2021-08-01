@@ -8,7 +8,6 @@ async function main() {
   try {
     const countryObj = await getCountryApi();
     let searchCriteria = '';
-    navButtnOnClick(countryObj);
 
     // Display Default Screen
     countryObj.forEach((item) => {
@@ -19,6 +18,7 @@ async function main() {
         item.capital,
         item.area,
         item.region);
+      createTable(item, 3, 'population', 1377422166);
     });
 
     // Updating Heading
@@ -51,7 +51,7 @@ async function main() {
     });
 
     getButton('scroll-to-data').addEventListener('click', () => {
-      var rect = getButton('graph-heading').getBoundingClientRect();
+      const rect = getButton('graph-heading').getBoundingClientRect();
       window.scrollTo(rect.top, rect.top);
     });
 
@@ -66,28 +66,24 @@ async function main() {
       document.getElementById('figure-table').innerHTML = '';
 
       if (searchCriteria === getButton('name').textContent) {
-        getCountryByName(countryObj, userInput, 1);
+        getCountryByName(countryObj, userInput);
         changeCriteriaHeading();
       } else if (searchCriteria === getButton('gini').textContent) {
-        getCountryByGini(countryObj, userInput, 1);
+        getCountryByGini(countryObj, userInput);
         changeCriteriaHeading();
       } else if (searchCriteria === getButton('population').textContent) {
         getPopulationByCountry(countryObj, userInput, 1);
         changeCriteriaHeading();
       } else if (searchCriteria === getButton('area').textContent) {
-        getCountryByArea(countryObj, userInput, 1);
+        getCountryByArea(countryObj, userInput);
         changeCriteriaHeading();
       } else if (searchCriteria === getButton('region').textContent) {
-        getCountryByRegion(countryObj, userInput, 1);
+        getCountryByRegion(countryObj, userInput);
         changeCriteriaHeading();
-      } else {
-        // getCountryByLanguage(countryObj, userInput, 1);
-        // changeCriteriaHeading();
       }
     });
   } catch (err) {
-    // need to update this with DOM Elements for Failure
-    console.log(err);
+    updateOnApiError();
   }
 }
 

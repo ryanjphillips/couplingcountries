@@ -5,6 +5,8 @@
 // Description: This function creates a list of countries on the "nav-button"
 //              on /countriescoupling/searchpage when clicked. It displays them A-Z.
 
+// I decided to scrap this button, but wanted to save the code for the future! :)
+
 function navButtnOnClick(obj) {
   // Sort Obj
   const sortedObj = sortCountriesNamesAlphabetically(obj, 1);

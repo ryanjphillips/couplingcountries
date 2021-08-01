@@ -1,11 +1,18 @@
+// Authour:     Ryan Phillips
+// Date:        08/1/2021
+// Function:    createTable()
+// Return:      undefined
+// Description: This function creates and displays a table based on given criteria.
+
 function createTable(obj, column, properties, percentage) {
   const table = document.getElementById('figure-table');
+  const tableHeading = document.getElementById('graph-heading');
   table.style.textAlign = 'center';
   table.style.fontSize = '20px';
   table.style.position = 'relative';
   table.style.left = '15%';
   table.style.border = 'solid black 1px';
-  table.style.borderRadius = '5px';
+  table.style.borderRadius = '2px';
   table.style.padding = '50px';
   table.style.color = 'tomato';
   table.style.fontWeight = 'bold';
@@ -14,6 +21,7 @@ function createTable(obj, column, properties, percentage) {
   table.style.borderBottom = 'none';
   table.style.borderTop = 'none';
 
+  tableHeading.textContent = `Countries Graph (Sorted by ${properties})`;
   table.style.fontFamily = 'Cambria, Cochin, Georgia, Times, Times New Roman, serif';
   const newRow = document.createElement('tr');
 
